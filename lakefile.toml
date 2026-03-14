@@ -1,0 +1,7 @@
+name = "CPPP"
+version = "0.1.0"
+defaultTargets = ["CPPP"]
+
+[[lean_lib]]
+name = "CPPP"
+
