@@ -28,3 +28,21 @@ Compiled artifacts are written under `.lake/build/lib/lean/`, including:
 - `CPPP.olean`
 
 You may also see companion files: `.ilean`, `.trace`, and `.hash`.
+
+## Python demo
+
+The repository also includes a small executable toy model showing a
+constructor-like in-world rewrite controller.
+
+Run:
+
+```bash
+python3 demo-constructor-code/run.py
+```
+
+This writes visual outputs under `demo-constructor-code/outputs/`, including:
+
+- `growth/step_0.svg` through `growth/step_4.svg`
+- `pruning/step_0.svg` through `pruning/step_4.svg`
+- `comparison_final.svg`
+- `index.html`

@@ -53,6 +53,7 @@ Lean lets us separate notions that are often blurred together in informal discus
 
 - `CPPP/Basic.lean` contains the core definitions.
 - `CPPP/Examples.lean` contains simple examples and one theorem witnessing the distinction between specification and realisation.
+- `demo-constructor-code/` contains the constructor demo code, explanation, and generated outputs in one place.
 - `CPPP.lean` re-exports the project modules.
 - `docs/note.md` is a short informal note suitable for discussion.
 
@@ -65,3 +66,27 @@ Likewise, in computational physics, an update rule specifies the next state abst
 ## Current status
 
 This is a minimal starting point, not a finished philosophy-of-physics formalisation. The current achievement is to formalise the hinge of the argument: the gap between abstract specification and reliable physical enactment.
+
+## Executable toy demo
+
+There is also a tiny dependency-free Python demo of the more concrete question:
+what would it look like for specific local rewrite content to be carried by an
+in-world constructor rather than only by an external rule?
+
+Run:
+
+```bash
+python3 demo-constructor-code/run.py
+```
+
+This writes SVG frames and a side-by-side comparison under
+`demo-constructor-code/outputs/`.
+
+The point of the demo is very narrow:
+
+- the constructor `C` exists in the graph,
+- its code exists in attached `P` nodes,
+- the outer engine is fixed and generic,
+- different in-world code yields different local dynamics.
+
+That is the minimal "internalized rewrite specificity" result.
