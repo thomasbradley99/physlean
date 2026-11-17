@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Agent Demo</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="page">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Toy decision architecture</p>
+            <h1>Sorting Agent</h1>
+            <p class="hero__copy">
+              A visible loop from body and world input through salience, emotion, simulated futures, chosen action, and
+              verbal report.
+            </p>
+          </div>
+          <button class="primary-button" data-step>Step mind</button>
+        </header>
+
+        <div class="scenario-row">
+          <button data-scenario="hungry">Hungry</button>
+          <button data-scenario="afraid">Afraid</button>
+          <button data-scenario="conflict">Conflict</button>
+          <button data-scenario="curious">Curious</button>
+        </div>
+
+        <main class="layout-grid">
+          <section class="panel">
+            <div class="panel__header">
+              <h2>World</h2>
+              <span id="steps-label">step 0</span>
+            </div>
+            <div id="world-grid" class="world-grid"></div>
+            <p class="legend">🧠 agent · 🍎 food · 🐺 threat · 🏠 shelter · ✨ novelty</p>
+          </section>
+
+          <section class="column-stack">
+            <div class="panel">
+              <h2>Body input</h2>
+              <div id="body-input" class="stack"></div>
+            </div>
+
+            <div class="panel">
+              <h2>Calculated emotional state</h2>
+              <div id="emotion-bars" class="stack"></div>
+            </div>
+          </section>
+
+          <section class="column-stack">
+            <div class="panel">
+              <h2>Object model / attention</h2>
+              <div id="object-model" class="stack"></div>
+            </div>
+
+            <div class="panel">
+              <h2>Predicted futures</h2>
+              <div id="futures" class="stack"></div>
+            </div>
+          </section>
+        </main>
+
+        <section class="panel report-panel">
+          <h2>Conscious report</h2>
+          <p id="report-copy" class="report-copy"></p>
+          <p id="report-note" class="report-note"></p>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="./src/standalone.js"></script>
+  </body>
+</html>
